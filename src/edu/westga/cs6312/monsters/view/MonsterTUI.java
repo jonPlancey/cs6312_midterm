@@ -1,5 +1,7 @@
 package edu.westga.cs6312.monsters.view;
 
+import com.sun.java_cup.internal.runtime.Scanner;
+import edu.westga.cs6312.monsters.model.GameBoard;
 
 /**
  * Midterm  
@@ -8,16 +10,22 @@ package edu.westga.cs6312.monsters.view;
  * @version	02.24.2016
  */
 public class MonsterTUI {
-
-	public MonsterTUI() {
-		// TODO Auto-generated constructor stub
+	
+	private Scanner userKeyboard;
+	private GameBoard board;
+	
+	/**
+	 * initialize the instance variable(s).
+	 */	
+	public MonsterTUI(GameBoard gameBoard) {
+		
 	}
 	
 	/**
 	 * controls program flow 
 	 **/	
 	public void run() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 }
