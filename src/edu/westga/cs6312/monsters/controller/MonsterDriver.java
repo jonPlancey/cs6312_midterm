@@ -1,5 +1,7 @@
 package edu.westga.cs6312.monsters.controller;
 
+import edu.westga.cs6312.monsters.model.GameBoard;
+
 /**
  * Midterm  
  * @author cs6312
