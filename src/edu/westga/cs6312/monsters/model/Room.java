@@ -25,7 +25,7 @@ public class Room {
 	 * Postcondition: healthCredits = health               
 	 */	
 	public Room(int room, Random random) {
-		if (room > 10 || room < 1) {
+		if (room > 9 || room < 0) {
 			throw new IllegalArgumentException("Invalid room, 1-10 only");
 		}
 		if (random == null) {

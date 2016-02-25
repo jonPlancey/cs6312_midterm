@@ -18,11 +18,7 @@ public class GameBoard {
 	
 
 	/** 
-	 * constructor for GameBoard 
-	 * @param randomObject  object to initialize instance variables 
-	 * 
-	 * Precondition: randomObject is not null 
-	 * Postcondition: new random object will be created              
+	 * constructor for GameBoard             
 	 */	
 	public GameBoard() {		
 		this.randomObject = new Random();
