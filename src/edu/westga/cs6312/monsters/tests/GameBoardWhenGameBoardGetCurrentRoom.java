@@ -19,7 +19,7 @@ public class GameBoardWhenGameBoardGetCurrentRoom {
 	 * method returns a Room at location 0
 	 */	
 	@Test
-	public void WhenGameBoardGetCurrentRoom() {
+	public void whenGameBoardGetCurrentRoom() {
 		fail("Not yet implemented");
 	}
 

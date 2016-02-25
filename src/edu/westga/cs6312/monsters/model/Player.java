@@ -30,7 +30,14 @@ public class Player extends Participant {
 	 * @return health credits to be deducted from the participant
 	 */ 	
 	public int fight() {
-		return super.getHealthCredits() - 50;
+		return -50;
 	}
 
+	/** 
+	 * Gets the health of player
+	 * @return current health of player
+	 */ 	
+	public int getHealthCredits() {
+		return super.getHealthCredits();
+	}
 }

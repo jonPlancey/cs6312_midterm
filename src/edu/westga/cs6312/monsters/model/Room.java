@@ -32,7 +32,7 @@ public class Room {
 			throw new IllegalArgumentException("Invalid random number");
 		}
 		this.roomNumber = room;
-		this.randomObject = new Random();
+		this.randomObject = random;
 		this.setupRoom();
 	}
 	

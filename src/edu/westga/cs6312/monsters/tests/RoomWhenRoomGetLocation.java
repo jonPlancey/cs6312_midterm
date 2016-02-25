@@ -2,6 +2,8 @@ package edu.westga.cs6312.monsters.tests;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
+import edu.westga.cs6312.monsters.model.Room;
+import java.util.Random; 
 
 
 
@@ -18,8 +20,12 @@ public class RoomWhenRoomGetLocation {
 	 *  method functions correctly. 
 	 */	
 	@Test
-	public void testWhenRoomGetLocation01() {
-		fail("Not yet implemented");
+	public void testWhenRoomGetLocation00() {
+		Random newRandom = new Random();
+		Room room = new Room(0, newRandom);
+		String expect = "Room at (0)"; 
+		String results = room.getLocation();
+		assertEquals(expect, results);		
 	}
 	
 	
@@ -29,7 +35,11 @@ public class RoomWhenRoomGetLocation {
 	 */	
 	@Test
 	public void testWhenRoomGetLocation02() {
-		fail("Not yet implemented");
+		Random newRandom = new Random();
+		Room room = new Room(2, newRandom);
+		String expect = "Room at (2)"; 
+		String results = room.getLocation();
+		assertEquals(expect, results);		
 	}	
 
 }

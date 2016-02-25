@@ -48,26 +48,19 @@ public class MonsterTUI {
 			throw new IllegalArgumentException("Invalid value, enter string");
 		}	
 		
-		int tmp = 0;
-		int userchoice;
+		int userchoice = 0;
 		
 		try {
+			System.out.print(message);
 			userchoice = Integer.parseInt(this.userKeyboard.nextLine());
-			tmp = userchoice;
 		} catch (NumberFormatException error) {
 			System.out.println("Sorry: [ " + this.getErrorString(error) + " ] is not valid. Enter 1, 2, 3 or 9. \n");
 		}
-		System.out.print(message);
-		
-		return tmp;
+		return userchoice;
 	}	
 	
 	
-	
 
-	
-	
-	
 	
 	/**
 	 * controls program flow 
@@ -77,15 +70,11 @@ public class MonsterTUI {
 		this.displayWelcome();
 		this.displayMenu();		
 		
-		
-		userchoice = this.getUserNumber("Enter selection: ");
-		
-		/*
 		try {
-			userchoice = Integer.parseInt(this.userKeyboard.nextLine());
+			userchoice = this.getUserNumber("Enter selection: ");
 		} catch (NumberFormatException error) {
 			System.out.println("Sorry: [ " + this.getErrorString(error) + " ] is not valid. Enter 1, 2, 3 or 9. \n");
-		}*/
+		}
 		
 		this.selectionCategories(userchoice);	
 	}
