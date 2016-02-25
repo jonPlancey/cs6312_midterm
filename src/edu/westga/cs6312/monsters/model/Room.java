@@ -21,7 +21,15 @@ public class Room {
 		
 	}
 	
-
+	
+	/** 
+	 * creates a kicking monster 
+	 * @return kickMonster object
+	 */
+	private KickingMonster createMonster() {	
+		KickingMonster kickMonster = new KickingMonster();
+		return kickMonster;
+	}	
 	
 	
 	
