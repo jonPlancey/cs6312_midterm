@@ -36,12 +36,18 @@ public abstract class Participant {
 	
 	/** 
 	 * Creates a string object describing player
-	 * @return returns a String representation of player
+	 * @return returns String representation of player
 	 */ 
 	@Override
 	public String toString (){
 		return "Creates a string object describing player";
 	}
 		
-	
+
+	/** 
+	 * returns the number of health credits to be 
+	 * deducted from the participant they are fighting.
+	 * @return health credits to be deducted from the participant
+	 */ 	
+	public abstract int fight ();
 }
