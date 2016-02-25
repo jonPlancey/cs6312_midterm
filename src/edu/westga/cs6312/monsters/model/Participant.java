@@ -34,4 +34,14 @@ public abstract class Participant {
 		return healthCredits;
 	}
 	
+	/** 
+	 * Creates a string object describing player
+	 * @return returns a String representation of player
+	 */ 
+	@Override
+	public String toString (){
+		return "Creates a string object describing player";
+	}
+		
+	
 }
