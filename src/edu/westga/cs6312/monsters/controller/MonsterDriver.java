@@ -16,8 +16,8 @@ public class MonsterDriver {
 	 * @param args Command line arguments, not used
 	 */ 
 	public static void main(String[] args) {
-		GameBoard game = new GameBoard(); 
-		MonsterTUI gui = new MonsterTUI(game);
+		GameBoard board = new GameBoard(); 
+		MonsterTUI gui = new MonsterTUI(board);
 		gui.run();
 	}
 
