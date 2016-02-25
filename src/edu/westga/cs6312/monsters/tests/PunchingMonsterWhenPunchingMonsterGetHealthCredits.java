@@ -2,7 +2,9 @@ package edu.westga.cs6312.monsters.tests;
 
 import static org.junit.Assert.*;
 
+import java.util.Random;
 import org.junit.Test;
+import edu.westga.cs6312.monsters.model.PunchingMonster;
 
 
 
@@ -20,7 +22,11 @@ public class PunchingMonsterWhenPunchingMonsterGetHealthCredits {
 	 */	
 	@Test
 	public void punchingMonsterGetHealthCredits() {
-		fail("Not yet implemented");
+		Random random = new Random();
+		PunchingMonster monster = new PunchingMonster(75, random);
+		int expect = 75; 
+		int results = monster.getHealthCredits();
+		assertEquals(expect, results);	
 	}
 
 }

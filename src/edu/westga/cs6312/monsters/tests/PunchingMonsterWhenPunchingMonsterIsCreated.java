@@ -3,10 +3,7 @@ package edu.westga.cs6312.monsters.tests;
 import static org.junit.Assert.*;
 
 import java.util.Random;
-
 import org.junit.Test;
-
-import edu.westga.cs6312.monsters.model.GameBoard;
 import edu.westga.cs6312.monsters.model.PunchingMonster;
 
 
@@ -28,8 +25,8 @@ public class PunchingMonsterWhenPunchingMonsterIsCreated {
 	public void punchingMonsterToString() {
 		Random random = new Random();
 		PunchingMonster monster = new PunchingMonster(75, random);
-		int expect = 100; 
-		int results = monster.getHealthCredits();
+		String expect = "player:75"; 
+		String results = monster.toString();
 		assertEquals(expect, results);
 	}
 
@@ -37,10 +34,10 @@ public class PunchingMonsterWhenPunchingMonsterIsCreated {
 	 * unit test for contructor
 	 */	
 	@Test
-	public void WhenPunchingMonsterGetHealthCredits() {
+	public void whenPunchingMonsterGetHealthCredits() {
 		Random random = new Random();
 		PunchingMonster monster = new PunchingMonster(75, random);
-		int expect = 100; 
+		int expect = 75; 
 		int results = monster.getHealthCredits();
 		assertEquals(expect, results);	
 	}
