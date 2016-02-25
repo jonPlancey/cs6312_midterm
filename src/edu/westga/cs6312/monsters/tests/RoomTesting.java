@@ -12,7 +12,11 @@ import org.junit.Test;
  * @version	02.24.2016
  */
 public class RoomTesting {
-
+	
+	/** 
+	 * tests to confirm constructor and 
+	 * toString methods function correctly
+	 */	
 	@Test
 	public void testGetLocation() {
 		fail("Not yet implemented");

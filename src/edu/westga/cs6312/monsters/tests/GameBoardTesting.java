@@ -12,9 +12,13 @@ import org.junit.Test;
  * @version	02.24.2016
  */
 public class GameBoardTesting {
-
+	
+	/** 
+	 * to confirm that the accessor 
+	 * method returns a Room at location 0
+	 */	
 	@Test
-	public void testGetCurrentRoom() {
+	public void WhenGameBoardGetCurrentRoom() {
 		fail("Not yet implemented");
 	}
 
