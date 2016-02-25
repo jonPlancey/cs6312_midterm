@@ -43,17 +43,28 @@ public class MonsterTUI {
 	 * Precondition: !message.equals("")  
 	 * Postcondition: healthCredits = health               
 	 */	
-	private int getUserNumber(String message) {
-		if (!message.equals("")) {
+	private int getUserNumber(String message) {		
+		if (message.equals("")) {
 			throw new IllegalArgumentException("Invalid value, enter string");
-		}		
+		}	
 		
-		return Integer.parseInt(message);
+		int tmp = 0;
+		int userchoice;
+		
+		try {
+			userchoice = Integer.parseInt(this.userKeyboard.nextLine());
+			tmp = userchoice;
+		} catch (NumberFormatException error) {
+			System.out.println("Sorry: [ " + this.getErrorString(error) + " ] is not valid. Enter 1, 2, 3 or 9. \n");
+		}
+		System.out.print(message);
+		
+		return tmp;
 	}	
 	
 	
 	
-	
+
 	
 	
 	
@@ -66,11 +77,15 @@ public class MonsterTUI {
 		this.displayWelcome();
 		this.displayMenu();		
 		
+		
+		userchoice = this.getUserNumber("Enter selection: ");
+		
+		/*
 		try {
 			userchoice = Integer.parseInt(this.userKeyboard.nextLine());
 		} catch (NumberFormatException error) {
 			System.out.println("Sorry: [ " + this.getErrorString(error) + " ] is not valid. Enter 1, 2, 3 or 9. \n");
-		}
+		}*/
 		
 		this.selectionCategories(userchoice);	
 	}
@@ -79,7 +94,7 @@ public class MonsterTUI {
 	/**
 	 * Displays the welcome
 	 **/
-	public void displayWelcome() {		
+	private void displayWelcome() {		
 		System.out.println("Welcome to the time collection application");		
 	
 	}
@@ -88,10 +103,10 @@ public class MonsterTUI {
 	/**
 	 * Displays menu options:
 	 **/
-	public void displayMenu() {		
+	private void displayMenu() {		
 		System.out.println("1 - Describe room\t 2 - Describe player ");
 		System.out.println("3 - Describe game board\t 9 – Quit the application");
-		System.out.print("Enter selection: ");
+		//System.out.print("Enter selection: ");
 	}
 	
 	
@@ -99,7 +114,7 @@ public class MonsterTUI {
 	 * main menu options, prompt user to select
 	 * @param userChoice users menu selection
 	 **/
-	public void displayMenuInput(int userChoice) {			
+	private void displayMenuInput(int userChoice) {			
 		try {
 			userChoice = Integer.parseInt(this.userKeyboard.nextLine());
 		} catch (NumberFormatException error) {
@@ -114,7 +129,7 @@ public class MonsterTUI {
 	 * Decides what functions execute based on user input
 	 * @param userchoice user's menu selection
 	 **/	
-	public void selectionCategories(int userchoice) {		
+	private void selectionCategories(int userchoice) {		
 		switch (userchoice) {
 			case 1:	
 				System.out.println("\n    [1 Describe room]");	   
