@@ -14,13 +14,41 @@ public class Room {
 	private int roomNumber;
 	private Random randomObject;
 	
-	/**
-	 * initialize the instance variable(s).
-	 */		
-	public Room(int roomNumber, Random randomObject) {
-		
+	/** 
+	 * 1 parameter constructor to create an Participant  
+	 * @param room	room's identifying number
+	 * @param random Random object to initialize instance variables 
+	 * 
+	 * Precondition: room < 10 || room >= 0
+	 * Precondition: random =! null  
+	 * Postcondition: room is between 0 and 9, inclusive  
+	 * Postcondition: healthCredits = health               
+	 */	
+	public Room(int room, Random random) {
+		if (room > 10 || room < 1) {
+			throw new IllegalArgumentException("Invalid room, 1-10 only");
+		}
+		if (random == null) {
+			throw new IllegalArgumentException("Invalid random number");
+		}
+		this.roomNumber = room;
+		this.randomObject = random;
 	}
 	
+
+	/** 
+	 * use the random number generator 
+	 * object to randomly determine if a
+	 * monster should be added to the room 
+	 */
+	private void setupRoom() {			
+		this.randomObject = new Random();
+		
+		for (int count = 0; count < this.totalCountRandom; count++) {
+			this.integerValues.add(count, this.randomNumber.nextInt(1000));
+		}	
+	}	
+		
 	
 	/** 
 	 * creates a kicking monster 
