@@ -3,6 +3,9 @@ package edu.westga.cs6312.monsters.tests;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import edu.westga.cs6312.monsters.model.KickingMonster;
+import edu.westga.cs6312.monsters.model.Player;
+
 
 
 /**
@@ -20,7 +23,23 @@ public class KickingMonsterWhenKickingMonsterFights {
 	 */	
 	@Test
 	public void testWhenKickingMonsterFights() {
-		fail("Not yet implemented");
+		KickingMonster monster = new KickingMonster();	
+		int expect = 70;
+		int results = monster.getHealthCredits() + monster.fight();
+		assertEquals(expect, results);
 	}
+
+	
+	/** 
+	 * tests to confirm that the 
+	 * fight method functions correctly
+	 */	
+	@Test
+	public void testWhenKickingMonsterFightsTwice() {
+		KickingMonster monster = new KickingMonster();	
+		int expect = 40;
+		int results = monster.getHealthCredits() + monster.fight() + monster.fight();
+		assertEquals(expect, results);
+	}	
 
 }

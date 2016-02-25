@@ -28,11 +28,11 @@ public class KickingMonster extends Participant {
 	
 	
 	/** 
-	 * inflict 50 health points of damage upon the participant
+	 * inflict 30 health points of damage upon the participant
 	 * @return health credits to be deducted from the participant
 	 */ 	
 	public int fight() {
-		return super.getHealthCredits() - 30;
+		return -30;
 	}	
 
 }
