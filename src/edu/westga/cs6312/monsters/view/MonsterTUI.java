@@ -1,10 +1,10 @@
 package edu.westga.cs6312.monsters.view;
 
 
-import java.util.Random;
+
 import java.util.Scanner;
 import edu.westga.cs6312.monsters.model.GameBoard;
-import edu.westga.cs6312.monsters.model.Room;
+
 
 
 /**
@@ -68,30 +68,34 @@ public class MonsterTUI {
 	 * Describe room
 	 **/	
 	public void describeRoom() {
+		System.out.println("Player currently in room " + this.board.getCurrentRoom());
+		System.out.println(this.board.isMonsterInRoom() +  "\n");
 
-		//Random newRandom = new Random();
-		//Room room = new Room(this.board.getCurrentRoom(), newRandom);
-		
-		System.out.println(this.board.toString());
-		//System.out.println(this.board.getCurrentRoom());
-		//System.out.println(this.board.getCurrentRoom() + " " + this.board.rooms);
-		//System.out.println(room.getLocation() + "  " + room.toString() + "  " + this.board.toString());
 	}
 	
 	
 	/**
-	 * Describe room
+	 * Describe Player
 	 **/	
 	public void describePlayer() {		
-		//
-		/*Player player = new Player();
-		System.out.println("The player has " 
-		+  player.getHealthCredits() 
-		+ " health credits and is located in " + getLocation() + " with no Monster inside";
-		*/
+		System.out.println(this.board.getPlayer() + " health credits.  Location: room " + this.board.getCurrentRoom() + "\n");
 	}	
 	
 
+	/**
+	 * Describe game board
+	 **/	
+	public void describeBoard() {	
+		System.out.println(this.board.toString());
+		System.out.println(this.board.getPlayer() + " health credits and is location in room " + this.board.getCurrentRoom() + "\n");
+		
+	}	
+	
+	
+	
+	
+	
+	
 	
 	/**
 	 * controls program flow 
@@ -127,6 +131,7 @@ public class MonsterTUI {
 		System.out.println("1 - Describe room\t 2 - Describe player ");
 		System.out.println("3 - Describe game board\t 9 – Quit the application");
 	}
+
 	
 	
 	/**
@@ -158,13 +163,13 @@ public class MonsterTUI {
 				break;
 	        case 2: 
 	        	System.out.println("\n*   [2 Describe player]");
-	        	//do something
+	        	this.describePlayer();
 	    		this.displayMenu();	    		
 	    		this.displayMenuInput(userchoice);		        	
 	            break;
 	        case 3: 
 	        	System.out.println("\n*   [3  Describe game board]");
-	        	//do something
+	        	this.describeBoard();
 	    		this.displayMenu();	    		
 	    		this.displayMenuInput(userchoice);		        	
 	            break;	            

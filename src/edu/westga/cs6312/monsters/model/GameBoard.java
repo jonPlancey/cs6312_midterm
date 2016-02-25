@@ -41,7 +41,7 @@ public class GameBoard {
 	 * loop though array to create and
 	 * assign new Rooms to each element
 	 */
-	public void populateRoom() {
+	private void populateRoom() {
 		for (int counter = 0; counter < 10; counter++) {
 			Room room = new Room(counter, this.randomObject);
 			this.rooms.add(room);	
@@ -75,6 +75,19 @@ public class GameBoard {
 			printOutput += this.rooms.get(count).toString() + "\n";
 		}
 		return printOutput;		
-		//return this.rooms + ":" + this.randomObject + ":" + this.player + ":" + this.currentRoom;
-	}	
+	}
+	
+	/** 
+	 * Return if monster is in room
+	 * @return returns String if monster is in room
+	 */ 
+	public String isMonsterInRoom() {	
+		String printMe = "";
+		if (this.rooms.get(this.getCurrentRoom()).getMonster() == null) {
+			printMe = "with no Monster inside";
+		} else {
+			printMe = " with Kicking Monster inside";
+		}		
+		return printMe;		
+	}		
 }

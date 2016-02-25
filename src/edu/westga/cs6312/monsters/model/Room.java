@@ -92,8 +92,7 @@ public class Room {
 		if (this.monster == null) {
 			printMe = this.getLocation() + " with no Monster inside";
 		} else {
-			printMe = this.getLocation() + " with Kicking Monster with " 
-		+ this.monster.getHealthCredits() + "health credits";
+			printMe = this.getLocation() + " with Kicking Monster with " + this.monster.getHealthCredits() + " health credits";
 		}		
 		return printMe;
 	}	
