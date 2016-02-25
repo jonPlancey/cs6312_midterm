@@ -63,10 +63,8 @@ public class MonsterTUI {
 	 **/	
 	public void run() {
 		int userchoice = 0;	
-		
 		this.displayMenu();		
 		
-
 		try {
 			userchoice = Integer.parseInt(this.userKeyboard.nextLine());
 		} catch (NumberFormatException error) {
@@ -81,10 +79,10 @@ public class MonsterTUI {
 	 **/
 	public void displayMenu() {
 		System.out.println("Welcome to the time collection application");		
-		System.out.println("1 - Describe room 		 \n\t A description of the room's contents will be displayed:");
-		System.out.println("2 - Describe player 	 \n\t A description of the player will be displayed:");
-		System.out.println("3 - Describe game board  \n\t A description of the game board will be displayed:"); 		
-		System.out.println("9 – Quit the application \n\t Thank the user for using the application!");	
+		System.out.println("1 - Describe room 		 \n");
+		System.out.println("2 - Describe player 	 \n");
+		System.out.println("3 - Describe game board  \n"); 		
+		System.out.println("9 – Quit the application \n");	
 	}
 	
 	/**
@@ -110,19 +108,25 @@ public class MonsterTUI {
 	public void selectionCategories(int userchoice) {		
 		switch (userchoice) {
 			case 1:	
-				System.out.println("\n    [1 Add a time]");	   
-	    		this.addTime();
+				System.out.println("\n    [1 Describe room]");	   
+	    		//do something
 	    		this.displayMenu();	    		
 	    		this.displayMenuInput(userchoice);	
 				break;
 	        case 2: 
-	        	System.out.println("\n*   [2 Display list of time]");
-	        	this.displayTime();
+	        	System.out.println("\n*   [2 Describe player]");
+	        	//do something
 	    		this.displayMenu();	    		
 	    		this.displayMenuInput(userchoice);		        	
 	            break;
 	        case 3: 
-	        	System.out.println("\n    [3 Quit]");
+	        	System.out.println("\n*   [3  Describe game board]");
+	        	//do something
+	    		this.displayMenu();	    		
+	    		this.displayMenuInput(userchoice);		        	
+	            break;	            
+	        case 9: 
+	        	System.out.println("\n    [9 Quit]");
 	        	System.out.println("    We hope you enjoyed this program.\n\n");
 	            break;
 	        default: 
@@ -132,21 +136,6 @@ public class MonsterTUI {
 		}	
 	}	
 
-	/**
-	 * Display list of animals
-	 **/
-	public void displayTime() {	
-
-	}
-	
-	
-	/**
-	 * prompts and captures input to add animal to animal collection
-	 **/	
-	public void addTime() {
-	
-
-	}
 	
 	
 	/**
