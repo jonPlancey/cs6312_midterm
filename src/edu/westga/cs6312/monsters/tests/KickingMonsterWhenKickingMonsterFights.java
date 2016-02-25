@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import edu.westga.cs6312.monsters.model.KickingMonster;
-import edu.westga.cs6312.monsters.model.Player;
 
 
 
@@ -38,7 +37,8 @@ public class KickingMonsterWhenKickingMonsterFights {
 	public void testWhenKickingMonsterFightsTwice() {
 		KickingMonster monster = new KickingMonster();	
 		int expect = 40;
-		int results = monster.getHealthCredits() + monster.fight() + monster.fight();
+		int results = monster.getHealthCredits() 
+				+ monster.fight() + monster.fight();
 		assertEquals(expect, results);
 	}	
 

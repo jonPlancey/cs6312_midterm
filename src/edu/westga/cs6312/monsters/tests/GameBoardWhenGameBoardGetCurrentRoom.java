@@ -2,6 +2,8 @@ package edu.westga.cs6312.monsters.tests;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
+import edu.westga.cs6312.monsters.model.GameBoard;
+
 
 
 
@@ -20,7 +22,10 @@ public class GameBoardWhenGameBoardGetCurrentRoom {
 	 */	
 	@Test
 	public void whenGameBoardGetCurrentRoom() {
-		fail("Not yet implemented");
+		GameBoard board = new GameBoard();
+		int expect = 0;
+		int results = board.getCurrentRoom();
+		assertEquals(expect, results);	
 	}
 
 }

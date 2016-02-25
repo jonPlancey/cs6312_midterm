@@ -19,7 +19,7 @@ public class KickingMonster extends Participant {
 		
 	
 	/** 
-	 * Creates a string object describing momster
+	 * Creates a string object describing monster
 	 * @return returns String representation of monster
 	 */ 
 	public String toString() {					
