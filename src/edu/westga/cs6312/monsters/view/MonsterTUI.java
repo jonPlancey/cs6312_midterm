@@ -63,6 +63,7 @@ public class MonsterTUI {
 	 **/	
 	public void run() {
 		int userchoice = 0;	
+		this.displayWelcome();
 		this.displayMenu();		
 		
 		try {
@@ -70,24 +71,32 @@ public class MonsterTUI {
 		} catch (NumberFormatException error) {
 			System.out.println("Sorry: [ " + this.getErrorString(error) + " ] is not valid. Enter 1, 2, 3 or 9. \n");
 		}
+		
 		this.selectionCategories(userchoice);	
 	}
 	
-	/**
-	 * Displays the following numbered 
-	 * list of menu options on the console:
-	 **/
-	public void displayMenu() {
-		System.out.println("Welcome to the time collection application");		
-		System.out.println("1 - Describe room 		 \n");
-		System.out.println("2 - Describe player 	 \n");
-		System.out.println("3 - Describe game board  \n"); 		
-		System.out.println("9 – Quit the application \n");	
-	}
 	
 	/**
-	 * main menu options
-	 * prompt user to select 1-3
+	 * Displays the welcome
+	 **/
+	public void displayWelcome() {		
+		System.out.println("Welcome to the time collection application");		
+	
+	}
+	
+	
+	/**
+	 * Displays menu options:
+	 **/
+	public void displayMenu() {		
+		System.out.println("1 - Describe room\t 2 - Describe player ");
+		System.out.println("3 - Describe game board\t 9 – Quit the application");
+		System.out.print("Enter selection: ");
+	}
+	
+	
+	/**
+	 * main menu options, prompt user to select
 	 * @param userChoice users menu selection
 	 **/
 	public void displayMenuInput(int userChoice) {			
@@ -132,8 +141,10 @@ public class MonsterTUI {
 	        default: 
 	        	System.out.print("Not valid input. \n\n");
 	        	this.displayMenu();
+	        	this.displayMenuInput(userchoice);
 	        	break;		
-		}	
+		}
+		System.out.println("\n");
 	}	
 
 	
