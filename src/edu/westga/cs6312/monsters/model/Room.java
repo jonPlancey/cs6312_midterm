@@ -1,5 +1,7 @@
 package edu.westga.cs6312.monsters.model;
 
+import java.util.Random;
+
 /**
  * Midterm  
  * @author 	cs6312
@@ -8,6 +10,11 @@ package edu.westga.cs6312.monsters.model;
  */
 public class Room {
 
+	Participant monster;
+	int roomNumber;
+	Random randomObject;
+	
+	
 	public Room() {
 		
 	}
