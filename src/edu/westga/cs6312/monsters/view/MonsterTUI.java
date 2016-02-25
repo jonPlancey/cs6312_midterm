@@ -37,9 +37,41 @@ public class MonsterTUI {
 	 * controls program flow 
 	 **/	
 	public void run() {
-		
+		getUserNumber("1");
 	}
 	
-
+	/** 
+	 * accept a parameter containing message to be printed 
+	 * to the user describing to them what number to enter. 
+	 * @param message message to be printed to the user
+	 * 
+	 * Precondition: !message.equals("")  
+	 * Postcondition: healthCredits = health               
+	 */	
+	private int getUserNumber(String message) {
+		if (!message.equals("")) {
+			throw new IllegalArgumentException("Invalid value, enter string");
+		}		
+		
+		return Integer.parseInt(message);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
