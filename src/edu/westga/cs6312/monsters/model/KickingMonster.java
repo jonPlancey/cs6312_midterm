@@ -14,7 +14,7 @@ public class KickingMonster extends Participant {
 	 * initialize the instance variable(s).
 	 */	
 	public KickingMonster() {
-		
+		super(100);		
 	}
 	
 	/** 
@@ -22,7 +22,7 @@ public class KickingMonster extends Participant {
 	 * @return health credits to be deducted from the participant
 	 */ 	
 	public int fight() {
-		return super.getHealthCredits() - 50;
+		return super.getHealthCredits() - 30;
 	}	
 
 }
