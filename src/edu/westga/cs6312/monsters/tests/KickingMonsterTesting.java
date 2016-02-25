@@ -12,19 +12,31 @@ import org.junit.Test;
  * @version	02.24.2016
  */
 public class KickingMonsterTesting {
-
+	
+	/** 
+	 * tests to confirm constructor and 
+	 * toString methods function correctly
+	 */	
 	@Test
-	public void testFight() {
+	public void WhenKickingMonsterIsCreated() {
 		fail("Not yet implemented");
 	}
-
+	
+	/** 
+	 * tests to confirm that the 
+	 * accessor method functions correctly
+	 */	
 	@Test
-	public void testKickingMonster() {
+	public void WhenKickingMonsterGetHealthCredits() {
 		fail("Not yet implemented");
 	}
-
+	
+	/** 
+	 * tests to confirm that the 
+	 * fight method functions correctly
+	 */	
 	@Test
-	public void testGetHealthCredits() {
+	public void WhenKickingMonsterFights() {
 		fail("Not yet implemented");
 	}
 
