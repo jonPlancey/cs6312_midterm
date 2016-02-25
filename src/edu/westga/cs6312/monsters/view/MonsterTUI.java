@@ -37,8 +37,10 @@ public class MonsterTUI {
 	 * controls program flow 
 	 **/	
 	public void run() {
-		getUserNumber("1");
+		this.getUserNumber("1");
 	}
+	
+	
 	
 	/** 
 	 * accept a parameter containing message to be printed 
