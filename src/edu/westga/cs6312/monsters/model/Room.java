@@ -33,6 +33,7 @@ public class Room {
 		}
 		this.roomNumber = room;
 		this.randomObject = new Random();
+		this.setupRoom();
 	}
 	
 

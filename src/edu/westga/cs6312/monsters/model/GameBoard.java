@@ -19,8 +19,30 @@ public class GameBoard {
 	/** 
 	 * Constructor for GameBoard
 	 */ 
-	public GameBoard() {
+	public GameBoard(Random randomObject) {
 		
 	}
 
+	
+	
+	/** 
+	 * creates a kicking monster 
+	 * @return kickMonster object
+	 */
+	private void setupBoard() {	
+		KickingMonster kickMonster = new KickingMonster();
+		return kickMonster;
+	}
+	
+	
+	
+	
+	/** 
+	 * Creates a string object describing game board
+	 * @return returns String representation of game board
+	 */ 
+	public String toString() {	
+		//note print out rooms
+		return this.rooms + ":" + this.randomObject + ":" + this.player + ":" + this.currentRoom;
+	}	
 }
