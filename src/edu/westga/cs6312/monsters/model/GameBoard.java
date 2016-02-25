@@ -1,5 +1,6 @@
 package edu.westga.cs6312.monsters.model;
 
+import java.util.ArrayList;
 
 /**
  * Midterm  
@@ -9,12 +10,18 @@ package edu.westga.cs6312.monsters.model;
  */
 public class GameBoard {
 
+	private ArrayList<Room> rooms;
+	
+	int randomNumber; //need to be object
+	
+	Player player;
+	int currentRoom;
 	
 	/** 
 	 * Constructor for GameBoard
 	 */ 
 	public GameBoard() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 }

@@ -9,16 +9,11 @@ package edu.westga.cs6312.monsters.model;
 public class Player extends Participant {
 
 	/** 
-	 * initialize the Player's health credits to 100
-	 * 
-	 * Precondition: health > 0  
-	 * Postcondition: An animal of whose type is kind and is
-	 *                covered with covering
-	 * Postcondition: healthCredits = health               
+	 * initialize the Player's health credits to 100             
 	 */
 	public Player() {
 		super(100);
-	}
+	}	
 	
 	
 	/** 
