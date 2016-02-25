@@ -19,7 +19,6 @@ public class MonsterDriver {
 		GameBoard game = new GameBoard(); 
 		MonsterTUI gui = new MonsterTUI(game);
 		gui.run();
-
 	}
 
 }
