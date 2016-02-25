@@ -4,10 +4,22 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class GameBoardWhenGameBoardMovePlayerRight {
 
+
+
+/**
+ * Midterm Unit Test 
+ * @author 	cs6312
+ * @author 	jim perry, jr.
+ * @version	02.24.2016
+ */
+public class GameBoardWhenGameBoardMovePlayerRight {
+	
+	/** 
+	 * unit test for movement
+	 */	
 	@Test
-	public void testMoveRight() {
+	public void WhenGameBoardMovePlayerRight() {
 		fail("Not yet implemented");
 	}
 
