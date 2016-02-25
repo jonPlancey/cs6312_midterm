@@ -21,8 +21,28 @@ public class Room {
 		
 	}
 	
+
 	
 	
+	
+	/** 
+	 * returns a Participant object storing 
+	 * the monster that's currently in Room
+	 * @return monster in current room 
+	 */
+	public String getLocation() {					
+		return "Room at (" + roomNumber + ")";
+	}	
+	
+	
+	/** 
+	 * returns a Participant object storing 
+	 * the monster that's currently in Room
+	 * @return monster in current room 
+	 */
+	public Participant getMonster() {					
+		return this.monster;
+	}
 	
 	
 	/** 
