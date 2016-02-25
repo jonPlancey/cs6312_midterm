@@ -10,11 +10,13 @@ import java.util.Random;
  */
 public class Room {
 
-	Participant monster;
-	int roomNumber;
-	Random randomObject;
+	private Participant monster;
+	private int roomNumber;
+	private Random randomObject;
 	
-	
+	/**
+	 * initialize the instance variable(s).
+	 */		
 	public Room() {
 		
 	}
