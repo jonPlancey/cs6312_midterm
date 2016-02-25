@@ -16,10 +16,18 @@ public class GameBoard {
 	private Player player;
 	private int currentRoom;
 	
+
 	/** 
-	 * Constructor for GameBoard
-	 */ 
+	 * constructor for GameBoard 
+	 * @param randomObject  object to initialize instance variables 
+	 * 
+	 * Precondition: randomObject is not null 
+	 * Postcondition: new random object will be created              
+	 */	
 	public GameBoard(Random randomObject) {
+		if (randomObject != null) {
+			throw new IllegalArgumentException("Invalid health");
+		}			
 		this.randomObject = new Random();
 		this.setupBoard();
 	}
@@ -31,7 +39,7 @@ public class GameBoard {
 	 */
 	private void setupBoard() {	
 		this.player = new Player();
-		this.rooms = new ArrayList <Room>();
+		this.rooms = new ArrayList <Room>(10);
 		this.populateRoom();
 		this.currentRoom = 0;		
 	}
@@ -41,8 +49,8 @@ public class GameBoard {
 	 * assign new Rooms to each element
 	 */
 	public void populateRoom() {		
-		for (int counter = 0; counter < 10; counter ++){
-			this.rooms[counter] = new Room(counter, randomObject);	
+		for (int counter = 0; counter < 10; counter++) {
+			this.rooms.add(new Room(counter, this.randomObject));	
 		}
 	}		
 	

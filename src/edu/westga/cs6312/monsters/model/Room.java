@@ -43,11 +43,11 @@ public class Room {
 	 * monster should be added to the room 
 	 */
 	private void setupRoom() {	
-		int probability = randomObject.nextInt(101);
-		if(probability < 50 ) {
-			monster = null;
+		int probability = this.randomObject.nextInt(101);
+		if (probability < 50) {
+			this.monster = null;
 		} else {
-			monster = createMonster(); 
+			this.monster = this.createMonster(); 
 		}
 	}	
 		
