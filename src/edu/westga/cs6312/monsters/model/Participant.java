@@ -19,7 +19,7 @@ public abstract class Participant {
 	 *                covered with covering
 	 * Postcondition: healthCredits = health               
 	 */
-	public Participant (int health) {
+	public Participant(int health) {
 		if (health < 0) {
 			throw new IllegalArgumentException("Invalid health");
 		}		
@@ -30,8 +30,8 @@ public abstract class Participant {
 	 * Gets the health of player
 	 * @return current health of player
 	 */ 	
-	public int getHealthCredits (){
-		return healthCredits;
+	public int getHealthCredits() {
+		return this.healthCredits;
 	}
 	
 	/** 
@@ -39,8 +39,8 @@ public abstract class Participant {
 	 * @return returns String representation of player
 	 */ 
 	@Override
-	public String toString (){
-		return "Creates a string object describing player";
+	public String toString() {
+		return "player:" + this.healthCredits;
 	}
 		
 
@@ -49,5 +49,5 @@ public abstract class Participant {
 	 * deducted from the participant they are fighting.
 	 * @return health credits to be deducted from the participant
 	 */ 	
-	public abstract int fight ();
+	public abstract int fight();
 }
