@@ -90,4 +90,23 @@ public class GameBoard {
 		}		
 		return printMe;		
 	}		
+	
+	
+	
+	
+	/** 
+	 * Move Player right
+	 */
+	public void moveRight() {
+		this.currentRoom = (this.currentRoom + tick) % 9; 
+	}
+	
+	
+	
+	/** 
+	 * Move Player Left
+	 */
+	public void moveLeft() {					
+		this.currentRoom = (this.currentRoom - tick) % 9; 
+	}
 }
