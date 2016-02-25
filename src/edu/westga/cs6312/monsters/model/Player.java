@@ -21,12 +21,11 @@ public class Player extends Participant {
 	}
 	
 	/** 
-	 * returns the number of health credits to be 
-	 * deducted from the participant they are fighting.
+	 * inflict 50 health points of damage upon the participant
 	 * @return health credits to be deducted from the participant
 	 */ 	
 	public int fight() {
-		return 0;
+		return super.healthCredits - 50;
 	}
 
 }
