@@ -17,9 +17,9 @@ public class Player extends Participant {
 	
 	
 	/** 
-	 * Gets animals kind
-	 * @return the kind of animal  
-	 */
+	 * Creates a string object describing player
+	 * @return returns String representation of player
+	 */ 
 	public String toString() {					
 		return super.toString();
 	}		

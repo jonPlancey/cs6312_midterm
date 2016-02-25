@@ -16,6 +16,16 @@ public class KickingMonster extends Participant {
 	public KickingMonster() {
 		super(100);		
 	}
+		
+	
+	/** 
+	 * Creates a string object describing momster
+	 * @return returns String representation of monster
+	 */ 
+	public String toString() {					
+		return super.toString();
+	}	
+	
 	
 	/** 
 	 * inflict 50 health points of damage upon the participant
