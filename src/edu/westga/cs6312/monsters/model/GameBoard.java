@@ -24,10 +24,7 @@ public class GameBoard {
 	 * Precondition: randomObject is not null 
 	 * Postcondition: new random object will be created              
 	 */	
-	public GameBoard(Random randomObject) {
-		if (randomObject != null) {
-			throw new IllegalArgumentException("Invalid health");
-		}			
+	public GameBoard() {		
 		this.randomObject = new Random();
 		this.setupBoard();
 	}
