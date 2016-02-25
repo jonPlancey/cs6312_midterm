@@ -2,6 +2,7 @@ package edu.westga.cs6312.monsters.tests;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
+import edu.westga.cs6312.monsters.model.KickingMonster;
 
 
 
@@ -20,7 +21,10 @@ public class KickingMonsterWhenKickingMonsterGetHealthCredits {
 	 */	
 	@Test
 	public void testWhenKickingMonsterGetHealthCredits() {
-		fail("Not yet implemented");
+		KickingMonster monster = new KickingMonster();
+		int expect = 100; 
+		int results = monster.getHealthCredits();
+		assertEquals(expect, results);	
 	}
 
 }

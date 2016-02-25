@@ -41,9 +41,10 @@ public class GameBoard {
 	 * loop though array to create and
 	 * assign new Rooms to each element
 	 */
-	public void populateRoom() {		
+	public void populateRoom() {
 		for (int counter = 0; counter < 10; counter++) {
-			this.rooms.add(new Room(counter, this.randomObject));	
+			Room room = new Room(counter, this.randomObject);
+			this.rooms.add(room);	
 		}
 	}		
 	
@@ -69,7 +70,11 @@ public class GameBoard {
 	 * @return returns String representation of game board
 	 */ 
 	public String toString() {	
-		//note print out rooms
-		return this.rooms + ":" + this.randomObject + ":" + this.player + ":" + this.currentRoom;
+		String printOutput = "";
+		for (int count = 0; count < this.rooms.size(); count++) {
+			printOutput += this.rooms.get(count).toString() + "\n";
+		}
+		return printOutput;		
+		//return this.rooms + ":" + this.randomObject + ":" + this.player + ":" + this.currentRoom;
 	}	
 }

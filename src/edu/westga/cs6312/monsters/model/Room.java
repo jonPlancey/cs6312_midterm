@@ -87,8 +87,15 @@ public class Room {
 	 * Creates a string object describing room
 	 * @return returns String representation of monster
 	 */ 
-	public String toString() {					
-		return this.monster + ":" + this.roomNumber + ":" + this.randomObject;
+	public String toString() {
+		String printMe = "";
+		if (this.monster == null) {
+			printMe = this.getLocation() + " with no Monster inside";
+		} else {
+			printMe = this.getLocation() + " with Kicking Monster with " 
+		+ this.monster.getHealthCredits() + "health credits";
+		}		
+		return printMe;
 	}	
 
 }

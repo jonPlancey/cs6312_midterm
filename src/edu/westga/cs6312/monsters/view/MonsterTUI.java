@@ -1,7 +1,11 @@
 package edu.westga.cs6312.monsters.view;
 
+
+import java.util.Random;
 import java.util.Scanner;
 import edu.westga.cs6312.monsters.model.GameBoard;
+import edu.westga.cs6312.monsters.model.Room;
+
 
 /**
  * Midterm  
@@ -20,17 +24,17 @@ public class MonsterTUI {
 	
 	/** 
 	 * constructor for MonsterTUI
-	 * @param board 	game's board 
+	 * @param gameBoard 	game's board 
 	 * Precondition: board is not null  
 	 * Postcondition: userKeyboard instance variable will be set
 	 * Postcondition: board instance variable will be set      
 	 */	
-	public MonsterTUI(GameBoard board) {
-		if (board == null) {
+	public MonsterTUI(GameBoard gameBoard) {
+		if (gameBoard == null) {
 			throw new IllegalArgumentException("Invalid gameBoard");
 		}		
 		this.userKeyboard = new Scanner(System.in);
-		this.board = board;
+		this.board = gameBoard;
 	}
 	
 	
@@ -59,6 +63,33 @@ public class MonsterTUI {
 		return userchoice;
 	}	
 	
+	
+	/**
+	 * Describe room
+	 **/	
+	public void describeRoom() {
+
+		//Random newRandom = new Random();
+		//Room room = new Room(this.board.getCurrentRoom(), newRandom);
+		
+		System.out.println(this.board.toString());
+		//System.out.println(this.board.getCurrentRoom());
+		//System.out.println(this.board.getCurrentRoom() + " " + this.board.rooms);
+		//System.out.println(room.getLocation() + "  " + room.toString() + "  " + this.board.toString());
+	}
+	
+	
+	/**
+	 * Describe room
+	 **/	
+	public void describePlayer() {		
+		//
+		/*Player player = new Player();
+		System.out.println("The player has " 
+		+  player.getHealthCredits() 
+		+ " health credits and is located in " + getLocation() + " with no Monster inside";
+		*/
+	}	
 	
 
 	
@@ -95,7 +126,6 @@ public class MonsterTUI {
 	private void displayMenu() {		
 		System.out.println("1 - Describe room\t 2 - Describe player ");
 		System.out.println("3 - Describe game board\t 9 – Quit the application");
-		//System.out.print("Enter selection: ");
 	}
 	
 	
@@ -122,7 +152,7 @@ public class MonsterTUI {
 		switch (userchoice) {
 			case 1:	
 				System.out.println("\n    [1 Describe room]");	   
-	    		//do something
+				this.describeRoom();
 	    		this.displayMenu();	    		
 	    		this.displayMenuInput(userchoice);	
 				break;
@@ -148,7 +178,7 @@ public class MonsterTUI {
 	        	this.displayMenuInput(userchoice);
 	        	break;		
 		}
-		System.out.println("\n");
+		System.out.println("\n\n");
 	}	
 
 	
