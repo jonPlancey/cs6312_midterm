@@ -20,22 +20,49 @@ public class GameBoard {
 	 * Constructor for GameBoard
 	 */ 
 	public GameBoard(Random randomObject) {
-		
+		this.randomObject = new Random();
+		this.setupBoard();
 	}
 
-	
-	
+		
 	/** 
 	 * creates a kicking monster 
 	 * @return kickMonster object
 	 */
 	private void setupBoard() {	
-		KickingMonster kickMonster = new KickingMonster();
-		return kickMonster;
+		this.player = new Player();
+		this.rooms = new ArrayList <Room>();
+		this.populateRoom();
+		this.currentRoom = 0;		
 	}
 	
+	/** 
+	 * loop though array to create and
+	 * assign new Rooms to each element
+	 */
+	public void populateRoom() {
+		this.room[0] = new Room(1, randomObject);
+		//for (){
+			
+		//}
+	}		
 	
 	
+	/** 
+	 * Get player's game object
+	 * @return returns the game's Player object
+	 */
+	public Player getPlayer() {					
+		return this.player;
+	}	
+	
+	/** 
+	 * Room where the Player is currently located
+	 * @return returns players current room
+	 */
+	public int getCurrentRoom() {					
+		return this.currentRoom;
+	}	
 	
 	/** 
 	 * Creates a string object describing game board
