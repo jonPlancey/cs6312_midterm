@@ -90,7 +90,19 @@ public class MonsterTUI {
 	}	
 	
 	
-	
+	/**
+	 * Describe game board
+	 **/	
+	public void move(int left, int right) {	
+		int userchoice = 0;	
+		try {
+			userchoice = this.getUserNumber(" Your directions:  (1) Left or (2) Right ");
+		} catch (NumberFormatException error) {
+			System.out.println("Sorry: [ " + this.getErrorString(error) + " ] is not valid. Enter 1 or 2 \n");
+		}
+		
+		this.selectionCategories(userchoice);			
+	}	
 	
 	
 	
