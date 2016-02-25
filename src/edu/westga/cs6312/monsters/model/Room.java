@@ -17,8 +17,20 @@ public class Room {
 	/**
 	 * initialize the instance variable(s).
 	 */		
-	public Room() {
+	public Room(int roomNumber, Random randomObject) {
 		
 	}
+	
+	
+	
+	
+	
+	/** 
+	 * Creates a string object describing room
+	 * @return returns String representation of monster
+	 */ 
+	public String toString() {					
+		return monster + ":" + roomNumber + ":" + randomObject;
+	}	
 
 }
