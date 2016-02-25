@@ -8,7 +8,7 @@ package edu.westga.cs6312.monsters.model;
  */
 public abstract class Participant {
 	
-	public int healthCredits;
+	private int healthCredits;
 	
 	/** 
 	 * 1 parameter constructor to create an Participant  

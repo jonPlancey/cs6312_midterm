@@ -20,12 +20,22 @@ public class Player extends Participant {
 		super(100);
 	}
 	
+	
+	/** 
+	 * Gets animals kind
+	 * @return the kind of animal  
+	 */
+	public String toString() {					
+		return super.toString();
+	}		
+	
+	
 	/** 
 	 * inflict 50 health points of damage upon the participant
 	 * @return health credits to be deducted from the participant
 	 */ 	
 	public int fight() {
-		return super.healthCredits - 50;
+		return super.getHealthCredits() - 50;
 	}
 
 }
