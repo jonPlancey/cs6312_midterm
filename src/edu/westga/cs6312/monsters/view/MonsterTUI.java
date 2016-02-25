@@ -70,7 +70,7 @@ public class MonsterTUI {
 		try {
 			userchoice = Integer.parseInt(this.userKeyboard.nextLine());
 		} catch (NumberFormatException error) {
-			System.out.println("Sorry: [ " + this.getErrorString(error) + " ] is not valid. Enter a number between 1 and 3. \n");
+			System.out.println("Sorry: [ " + this.getErrorString(error) + " ] is not valid. Enter 1, 2, 3 or 9. \n");
 		}
 		this.selectionCategories(userchoice);	
 	}
@@ -81,9 +81,10 @@ public class MonsterTUI {
 	 **/
 	public void displayMenu() {
 		System.out.println("Welcome to the time collection application");		
-		System.out.println("1 - Add an time to the list");
-		System.out.println("2 - Print the times in the list"); 
-		System.out.println("3 – Quit\n");	
+		System.out.println("1 - Describe room 		 \n\t A description of the room's contents will be displayed:");
+		System.out.println("2 - Describe player 	 \n\t A description of the player will be displayed:");
+		System.out.println("3 - Describe game board  \n\t A description of the game board will be displayed:"); 		
+		System.out.println("9 – Quit the application \n\t Thank the user for using the application!");	
 	}
 	
 	/**
