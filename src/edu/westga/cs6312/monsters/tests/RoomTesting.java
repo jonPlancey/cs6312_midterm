@@ -14,12 +14,22 @@ import org.junit.Test;
 public class RoomTesting {
 	
 	/** 
-	 * tests to confirm constructor and 
-	 * toString methods function correctly
+	 * tests to confirm the acessor
+	 *  method functions correctly. 
 	 */	
 	@Test
-	public void testGetLocation() {
+	public void WhenRoomGetLocation01() {
 		fail("Not yet implemented");
 	}
+	
+	
+	/** 
+	 * tests to confirm the acessor
+	 *  method functions correctly. 
+	 */	
+	@Test
+	public void WhenRoomGetLocation02() {
+		fail("Not yet implemented");
+	}	
 
 }
