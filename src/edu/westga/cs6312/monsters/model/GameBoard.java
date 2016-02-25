@@ -40,11 +40,10 @@ public class GameBoard {
 	 * loop though array to create and
 	 * assign new Rooms to each element
 	 */
-	public void populateRoom() {
-		this.room[0] = new Room(1, randomObject);
-		//for (){
-			
-		//}
+	public void populateRoom() {		
+		for (int counter = 0; counter < 10; counter ++){
+			this.rooms[counter] = new Room(counter, randomObject);	
+		}
 	}		
 	
 	
