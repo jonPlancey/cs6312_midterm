@@ -86,7 +86,7 @@ public class GameBoard {
 		if (this.rooms.get(this.getCurrentRoom()).getMonster() == null) {
 			printMe = "with no Monster inside";
 		} else {
-			printMe = " with Kicking Monster inside";
+			printMe = "with Kicking Monster inside";
 		}		
 		return printMe;		
 	}		

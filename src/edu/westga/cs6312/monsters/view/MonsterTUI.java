@@ -68,9 +68,7 @@ public class MonsterTUI {
 	 * Describe room
 	 **/	
 	public void describeRoom() {
-		System.out.println("Player currently in room " + this.board.getCurrentRoom());
-		System.out.println(this.board.isMonsterInRoom() +  "\n");
-
+		System.out.println("Player currently in room " + this.board.getCurrentRoom() + " " + this.board.isMonsterInRoom() +  "\n");
 	}
 	
 	

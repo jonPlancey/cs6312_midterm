@@ -15,8 +15,6 @@ public abstract class Participant {
 	 * @param health	health left for player 
 	 * 
 	 * Precondition: health > 0  
-	 * Postcondition: An animal of whose type is kind and is
-	 *                covered with covering
 	 * Postcondition: healthCredits = health               
 	 */
 	public Participant(int health) {

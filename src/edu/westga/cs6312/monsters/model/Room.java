@@ -53,12 +53,19 @@ public class Room {
 		
 	
 	/** 
-	 * creates a kicking monster 
+	 * Random creates a monster
 	 * @return kickMonster object
 	 */
-	private KickingMonster createMonster() {	
-		KickingMonster kickMonster = new KickingMonster();
-		return kickMonster;
+	private Participant createMonster() {			
+		int probability = this.randomObject.nextInt(101);
+		
+		if (probability < 50) {
+			KickingMonster kickMonster = new KickingMonster();
+			return kickMonster;
+		} else {
+			PunchingMonster punchMonster = new PunchingMonster(75, randomObject);			
+			return punchMonster; 
+		}		
 	}	
 	
 	
