@@ -90,10 +90,21 @@ public class MonsterTUI {
 	}	
 	
 	
-	/**
-	 * Describe game board
-	 **/	
+	/** 
+	 * Moves player 
+	 * @param left	move player left
+	 * @param right	move player right 
+	 * 
+	 * Precondition: left == 1, right == 2
+	 * Postcondition: left and right will always be 1 or 2               
+	 */	
 	public void move(int left, int right) {	
+		if (left != 1) {
+			throw new IllegalArgumentException("Invalid selection 1 for left");
+		}	
+		if (right != 2) {
+			throw new IllegalArgumentException("Invalid selection 2 for right");
+		}			
 		int userchoice = 0;	
 		try {
 			userchoice = this.getUserNumber(" Your directions:  (1) Left or (2) Right ");

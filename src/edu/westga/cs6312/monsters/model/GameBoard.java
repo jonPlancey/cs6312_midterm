@@ -98,7 +98,7 @@ public class GameBoard {
 	 * Move Player right
 	 */
 	public void moveRight() {
-		this.currentRoom = (this.currentRoom + tick) % 9; 
+		this.currentRoom = (this.currentRoom + 1) % 9; 
 	}
 	
 	
@@ -107,6 +107,6 @@ public class GameBoard {
 	 * Move Player Left
 	 */
 	public void moveLeft() {					
-		this.currentRoom = (this.currentRoom - tick) % 9; 
+		this.currentRoom = (this.currentRoom - 1) % 9; 
 	}
 }

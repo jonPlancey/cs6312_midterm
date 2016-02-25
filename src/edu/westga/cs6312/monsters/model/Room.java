@@ -63,7 +63,7 @@ public class Room {
 			KickingMonster kickMonster = new KickingMonster();
 			return kickMonster;
 		} else {
-			PunchingMonster punchMonster = new PunchingMonster(75, randomObject);			
+			PunchingMonster punchMonster = new PunchingMonster(75, this.randomObject);			
 			return punchMonster; 
 		}		
 	}	
