@@ -1,6 +1,7 @@
 package edu.westga.cs6312.monsters.controller;
 
 import edu.westga.cs6312.monsters.model.GameBoard;
+import edu.westga.cs6312.monsters.view.MonsterTUI;
 
 /**
  * Midterm  

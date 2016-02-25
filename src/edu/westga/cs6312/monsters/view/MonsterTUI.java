@@ -12,5 +12,12 @@ public class MonsterTUI {
 	public MonsterTUI() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	/**
+	 * controls program flow 
+	 **/	
+	public void run() {
+		// TODO Auto-generated constructor stub
+	}
 
 }
