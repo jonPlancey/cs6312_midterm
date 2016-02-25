@@ -32,7 +32,7 @@ public class Room {
 			throw new IllegalArgumentException("Invalid random number");
 		}
 		this.roomNumber = room;
-		this.randomObject = random;
+		this.randomObject = new Random();
 	}
 	
 
@@ -41,12 +41,13 @@ public class Room {
 	 * object to randomly determine if a
 	 * monster should be added to the room 
 	 */
-	private void setupRoom() {			
-		this.randomObject = new Random();
-		
-		for (int count = 0; count < this.totalCountRandom; count++) {
-			this.integerValues.add(count, this.randomNumber.nextInt(1000));
-		}	
+	private void setupRoom() {	
+		int probability = randomObject.nextInt(101);
+		if(probability < 50 ) {
+			monster = null;
+		} else {
+			monster = createMonster(); 
+		}
 	}	
 		
 	
@@ -67,7 +68,7 @@ public class Room {
 	 * @return monster in current room 
 	 */
 	public String getLocation() {					
-		return "Room at (" + roomNumber + ")";
+		return "Room at (" + this.roomNumber + ")";
 	}	
 	
 	
@@ -86,7 +87,7 @@ public class Room {
 	 * @return returns String representation of monster
 	 */ 
 	public String toString() {					
-		return monster + ":" + roomNumber + ":" + randomObject;
+		return this.monster + ":" + this.roomNumber + ":" + this.randomObject;
 	}	
 
 }
